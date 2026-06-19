@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;}
+    body{background:#0C0C0C;font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    ::selection{background:#C9A24B;color:#0C0C0C;}
+    @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  </style>
+</helmet>
+
+<div style="background:#0C0C0C;color:#F1ECE1;overflow-x:hidden;">
+
+  <!-- ===== MARQUEE ===== -->
+  <sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
+  <div style="background:linear-gradient(90deg,#C9A24B,#E7CB7E,#C9A24B);overflow:hidden;white-space:nowrap;border-bottom:1px solid rgba(0,0,0,0.15);">
+    <div style="display:inline-flex;gap:48px;padding:11px 24px;animation:scrollx 34s linear infinite;will-change:transform;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#2A1018;font-weight:500;">Certificação reconhecida pelo MEC</span><span style="color:#2A1018;">✦</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#2A1018;font-weight:500;">+150 ferramentas catalogadas</span><span style="color:#2A1018;">✦</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#2A1018;font-weight:500;">Certificação pela Faculdade Anhanguera</span><span style="color:#2A1018;">✦</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#2A1018;font-weight:500;">Terapia de relacionamento e casais</span><span style="color:#2A1018;">✦</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#2A1018;font-weight:500;">Certificação reconhecida pelo MEC</span><span style="color:#2A1018;">✦</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#2A1018;font-weight:500;">+150 ferramentas catalogadas</span><span style="color:#2A1018;">✦</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#2A1018;font-weight:500;">Certificação pela Faculdade Anhanguera</span><span style="color:#2A1018;">✦</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#2A1018;font-weight:500;">Terapia de relacionamento e casais</span><span style="color:#2A1018;">✦</span>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===== HERO ===== -->
+  <section style="position:relative;background:radial-gradient(120% 120% at 80% 0%, #1F1F1F 0%, #151515 45%, #0C0C0C 100%);padding:26px 0 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <img src="assets/logo.png" alt="Tempestade de Relacionamentos" style="height:46px;width:auto;display:block;">
+
+      <a href="#inscricao" style="display:none;"></a>
+    </div>
+
+    <div style="max-width:1180px;margin:0 auto;padding:46px 32px 0;display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:end;">
+      <div style="padding-bottom:64px;">
+        <div style="display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border:1px solid rgba(201,162,75,0.45);border-radius:999px;margin-bottom:26px;">
+          <span style="width:6px;height:6px;border-radius:50%;background:#E7CB7E;"></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#E7CB7E;">Certificação reconhecida pelo MEC</span>
+        </div>
+        <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5.4vw,68px);line-height:1.02;margin:0 0 22px;color:#F6F2E9;letter-spacing:-0.01em;">Seja uma profissional <span style="font-style:italic;color:#E7CB7E;">referência</span> em Terapia de Relacionamento e Casais</h1>
+        <p style="font-size:17px;line-height:1.7;color:rgba(241,236,225,0.74);max-width:480px;margin:0 0 34px;">Deixe de ser mais uma. Domine romances, dinâmicas, recursos lúdicos e o acolhimento do trauma para conduzir atendimentos individuais ou em casal com a segurança de quem entrega o melhor.</p>
+        <a href="#inscricao" style="display:inline-flex;align-items:center;gap:11px;padding:19px 38px;border-radius:999px;background:linear-gradient(135deg,#E7CB7E,#C9A24B);color:#0C0C0C;font-weight:800;font-size:14.5px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;box-shadow:0 16px 44px rgba(201,162,75,0.30);">Quero me inscrever agora <span style="font-size:17px;">→</span></a>
+        <div style="display:flex;align-items:center;gap:16px;margin-top:34px;">
+          <div style="display:flex;">
+            <div style="position:relative;width:38px;height:38px;border-radius:50%;overflow:hidden;border:2px solid #1A1A1A;"><dc-import name="SlotWarm" tone="dark" label="aluna" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+            <div style="position:relative;width:38px;height:38px;border-radius:50%;overflow:hidden;border:2px solid #1A1A1A;margin-left:-12px;"><dc-import name="SlotWarm" tone="dark" label="aluna" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+            <div style="position:relative;width:38px;height:38px;border-radius:50%;overflow:hidden;border:2px solid #1A1A1A;margin-left:-12px;"><dc-import name="SlotWarm" tone="dark" label="aluna" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+            <div style="position:relative;width:38px;height:38px;border-radius:50%;overflow:hidden;border:2px solid #1A1A1A;margin-left:-12px;"><dc-import name="SlotWarm" tone="dark" label="aluna" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+          </div>
+          <div>
+            <div style="color:#E7CB7E;font-size:14px;letter-spacing:.08em;">★★★★★</div>
+            <div style="font-size:13px;color:rgba(241,236,225,0.66);">+5.000 alunas formadas em todo o Brasil</div>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;display:flex;align-items:flex-end;justify-content:center;padding:40px 0 56px;">
+        <div style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);width:108%;height:84%;background:radial-gradient(50% 50% at 50% 50%, rgba(201,162,75,0.22), rgba(201,162,75,0.12) 48%, rgba(12,12,12,0) 74%);filter:blur(10px);"></div>
+        <div style="position:relative;width:100%;max-width:460px;border-radius:20px;overflow:hidden;border:1px solid rgba(201,162,75,0.35);box-shadow:0 30px 70px rgba(0,0,0,0.5);">
+          <img src="assets/cris-full.png" alt="Cris Schumann" style="width:100%;height:auto;display:block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTEÚDO POR DENTRO (carousel) ===== -->
+  <section style="background:#121212;padding:88px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#C9A24B;margin-bottom:14px;">A formação por dentro</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,48px);line-height:1.08;margin:0 0 8px;color:#F6F2E9;max-width:640px;">Conheça os encontros que vão estruturar a sua prática clínica</h2>
+      <p style="color:rgba(241,236,225,0.6);font-size:16px;max-width:560px;margin:0 0 40px;">Um percurso pensado para você sair atendendo — do primeiro acolhimento à condução completa de uma sessão.</p>
+    </div>
+    <div style="overflow:hidden;padding:4px 0 24px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);">
+      <div style="display:flex;gap:20px;width:max-content;padding:0 10px;animation:scrollx 60s linear infinite;will-change:transform;" style-hover="animation-play-state:paused;">
+      <sc-for list="{{ modulesLoop }}" as="m" hint-placeholder-count="7">
+        <div style="flex:0 0 300px;border-radius:16px;overflow:hidden;background:#080808;border:1px solid rgba(201,162,75,0.18);">
+          <div style="position:relative;height:340px;">
+            <dc-import name="SlotWarm" tone="dark" label="{{ m.img }}" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,8,0) 40%,rgba(8,8,8,0.92) 100%);"></div>
+            <div style="position:absolute;top:16px;left:16px;padding:5px 12px;border-radius:999px;background:rgba(201,162,75,0.92);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#0C0C0C;font-weight:500;">{{ m.tag }}</div>
+            <div style="position:absolute;bottom:18px;left:18px;right:18px;font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.12;color:#F6F2E9;">{{ m.title }}</div>
+          </div>
+        </div>
+      </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONHEÇA A FORMAÇÃO — benefit grid ===== -->
+  <section style="background:#0C0C0C;padding:90px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;text-align:center;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#C9A24B;margin-bottom:14px;">Conheça a formação</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,48px);line-height:1.08;margin:0 auto 54px;color:#F6F2E9;max-width:560px;">Tudo que você recebe para atender com autoridade</h2>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;">
+        <sc-for list="{{ benefits }}" as="b" hint-placeholder-count="8">
+          <div style="text-align:left;padding:28px 24px;border-radius:16px;background:linear-gradient(160deg,#1E1E1E,#121212);border:1px solid rgba(201,162,75,0.18);">
+            <div style="width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(201,162,75,0.14);border:1px solid rgba(201,162,75,0.35);font-size:20px;margin-bottom:18px;">{{ b.icon }}</div>
+            <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:#E7CB7E;margin-bottom:8px;">{{ b.title }}</div>
+            <p style="font-size:13.5px;line-height:1.6;color:rgba(241,236,225,0.62);margin:0;">{{ b.text }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALÉM DISSO (extras) ===== -->
+  <section style="background:#121212;padding:84px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);margin:0 0 38px;color:#F6F2E9;">Além disso, você também terá acesso a:</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+        <sc-for list="{{ extras }}" as="e" hint-placeholder-count="6">
+          <div style="border-radius:16px;overflow:hidden;background:#080808;border:1px solid rgba(201,162,75,0.16);">
+            <div style="position:relative;height:160px;"><dc-import name="SlotWarm" tone="dark" label="{{ e.img }}" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+            <div style="padding:18px 20px;font-family:'Manrope',sans-serif;font-weight:600;font-size:15px;color:#F1ECE1;line-height:1.4;">{{ e.title }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="#inscricao" style="display:inline-flex;align-items:center;gap:11px;padding:18px 38px;border-radius:999px;background:linear-gradient(135deg,#E7CB7E,#C9A24B);color:#0C0C0C;font-weight:800;font-size:14px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;box-shadow:0 16px 44px rgba(201,162,75,0.26);">Quero ter minha vaga agora →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FERRAMENTAS BANNER ===== -->
+  <section style="background:linear-gradient(120deg,#C9A24B,#0C0C0C);padding:74px 0;text-align:center;">
+    <div style="max-width:980px;margin:0 auto;padding:0 32px;">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,3.8vw,46px);line-height:1.14;margin:0;color:#F8F4EC;">São mais de <span style="color:#E7CB7E;">150 ferramentas</span> catalogadas, específicas para você usar em terapias individuais ou em casal — sendo mais de <span style="color:#E7CB7E;">90 delas criadas por mim</span>.</h2>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICAÇÃO ANHANGUERA ===== -->
+  <section style="background:#F2EBDC;padding:84px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center;">
+      <div style="position:relative;height:380px;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.16);"><dc-import name="SlotWarm" tone="light" label="certificado / diploma emoldurado" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#9A7A2E;margin-bottom:14px;">Reconhecimento</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,46px);line-height:1.06;margin:0 0 28px;color:#141414;">Certificação pela Faculdade Anhanguera</h2>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <sc-for list="{{ certs }}" as="c" hint-placeholder-count="5">
+            <div style="display:flex;align-items:flex-start;gap:13px;">
+              <span style="flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:#C9A24B;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;">✓</span>
+              <span style="font-size:16px;color:#2A2520;line-height:1.45;">{{ c }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <a href="#inscricao" style="display:inline-flex;align-items:center;gap:11px;margin-top:34px;padding:17px 34px;border-radius:999px;background:#141414;color:#F2EBDC;font-weight:700;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;">Quero me inscrever agora →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTADOS (video grid) ===== -->
+  <section style="background:#0C0C0C;padding:90px 0;text-align:center;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#C9A24B;margin-bottom:14px;">+Resultados +Transformações</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,48px);line-height:1.08;margin:0 auto 48px;color:#F6F2E9;max-width:620px;">Chegou a hora de você ter resultados como esses</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;">
+        <sc-for list="{{ results }}" as="r" hint-placeholder-count="6">
+          <div style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1/1;border:1px solid rgba(201,162,75,0.18);">
+            <dc-import name="SlotWarm" tone="dark" label="{{ r }}" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+              <div style="width:58px;height:58px;border-radius:50%;background:rgba(231,203,126,0.92);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,0.35);"><span style="color:#0C0C0C;font-size:20px;margin-left:3px;">▶</span></div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <a href="#inscricao" style="display:inline-flex;align-items:center;gap:11px;margin-top:46px;padding:18px 38px;border-radius:999px;background:linear-gradient(135deg,#E7CB7E,#C9A24B);color:#0C0C0C;font-weight:800;font-size:14px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;box-shadow:0 16px 44px rgba(201,162,75,0.26);">Também quero me transformar →</a>
+    </div>
+  </section>
+
+  <!-- ===== INSTRUCTOR FEATURES ===== -->
+  <section style="background:#121212;padding:86px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:0.85fr 1.15fr;gap:54px;align-items:center;">
+      <div style="position:relative;height:440px;border-radius:16px;overflow:hidden;"><dc-import name="SlotWarm" tone="dark" label="Cris atendendo / em cena" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,3.8vw,44px);line-height:1.08;margin:0 0 36px;color:#F6F2E9;max-width:440px;">A formação que ninguém te ofereceu quando você mais precisava</h2>
+        <div style="display:flex;flex-direction:column;gap:24px;">
+          <sc-for list="{{ feats }}" as="f" hint-placeholder-count="4">
+            <div style="display:flex;align-items:flex-start;gap:16px;">
+              <div style="flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:rgba(201,162,75,0.14);border:1px solid rgba(201,162,75,0.35);display:flex;align-items:center;justify-content:center;font-size:18px;">{{ f.icon }}</div>
+              <p style="font-size:16px;line-height:1.6;color:rgba(241,236,225,0.78);margin:3px 0 0;">{{ f.text }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUEM É CRIS ===== -->
+  <section style="background:linear-gradient(135deg,#1F1F1F,#151515);padding:90px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:54px;align-items:center;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#C9A24B;margin-bottom:16px;">Quem te ensina</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(32px,4.4vw,54px);line-height:1.02;margin:0 0 24px;color:#F6F2E9;">Cris Schumann</h2>
+        <p style="font-size:16px;line-height:1.74;color:rgba(241,236,225,0.76);margin:0 0 18px;max-width:520px;">Especialista em Terapia de Relacionamento e Casais, criei a Formação Tempestade de Relacionamentos para colocar nas suas mãos o método e as ferramentas que eu levei anos para reunir na minha própria clínica.</p>
+        <p style="font-size:16px;line-height:1.74;color:rgba(241,236,225,0.76);margin:0 0 30px;max-width:520px;">Mais do que teoria, você recebe a prática real do consultório — para atender com segurança, construir autoridade e transformar a vida dos seus clientes desde a primeira sessão.</p>
+        <div style="padding:22px 26px;border-left:3px solid #C9A24B;background:rgba(0,0,0,0.18);border-radius:0 12px 12px 0;">
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;line-height:1.4;color:#F1ECE1;margin:0;">"Você não precisa ser mais uma. Você pode ser a referência que o seu cliente procura."</p>
+        </div>
+      </div>
+      <div style="position:relative;height:480px;border-radius:18px;overflow:hidden;"><dc-import name="SlotWarm" tone="dark" label="retrato editorial da Cris" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTEÚDO + STATS ===== -->
+  <section style="background:#0C0C0C;padding:90px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;text-align:center;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#C9A24B;margin-bottom:14px;">Conteúdo programático</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,48px);line-height:1.08;margin:0 auto 12px;color:#F6F2E9;max-width:620px;">A formação que vai mudar o seu próximo capítulo</h2>
+    </div>
+    <div style="max-width:1180px;margin:40px auto 0;padding:0 32px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:44px;align-items:center;">
+      <div style="position:relative;height:340px;border-radius:16px;overflow:hidden;"><dc-import name="SlotWarm" tone="dark" label="vídeo de apresentação da formação" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><div style="width:64px;height:64px;border-radius:50%;background:rgba(231,203,126,0.92);display:flex;align-items:center;justify-content:center;"><span style="color:#0C0C0C;font-size:22px;margin-left:3px;">▶</span></div></div>
+      </div>
+      <div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:30px;">
+          <sc-for list="{{ programa }}" as="p" hint-placeholder-count="6">
+            <div style="display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:12px;background:linear-gradient(160deg,#1E1E1E,#121212);border:1px solid rgba(201,162,75,0.16);">
+              <span style="flex:0 0 auto;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#C9A24B;letter-spacing:.1em;">{{ p.n }}</span>
+              <span style="font-size:14.5px;color:#F1ECE1;font-weight:500;">{{ p.t }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+          <div style="text-align:center;padding:18px 8px;border-radius:12px;border:1px solid rgba(201,162,75,0.3);"><div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#E7CB7E;line-height:1;">8</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,236,225,0.6);margin-top:6px;">Módulos</div></div>
+          <div style="text-align:center;padding:18px 8px;border-radius:12px;border:1px solid rgba(201,162,75,0.3);"><div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#E7CB7E;line-height:1;">+90h</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,236,225,0.6);margin-top:6px;">Conteúdo</div></div>
+          <div style="text-align:center;padding:18px 8px;border-radius:12px;border:1px solid rgba(201,162,75,0.3);"><div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#E7CB7E;line-height:1;">+150</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(241,236,225,0.6);margin-top:6px;">Ferramentas</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BÔNUS ===== -->
+  <section style="background:#121212;padding:86px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;text-align:center;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#C9A24B;margin-bottom:14px;">Bônus exclusivos</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,46px);line-height:1.08;margin:0 auto 50px;color:#F6F2E9;max-width:560px;">Ao se inscrever na formação, você ganha esses bônus</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;text-align:left;">
+        <sc-for list="{{ bonus }}" as="bn" hint-placeholder-count="4">
+          <div style="display:grid;grid-template-columns:130px 1fr;border-radius:16px;overflow:hidden;background:linear-gradient(160deg,#1E1E1E,#0B0B0B);border:1px solid rgba(201,162,75,0.2);">
+            <div style="position:relative;"><dc-import name="SlotWarm" tone="dark" label="{{ bn.img }}" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+            <div style="padding:24px 26px;">
+              <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.02em;color:#F1ECE1;margin-bottom:10px;line-height:1.25;">{{ bn.title }}</div>
+              <p style="font-size:13.5px;line-height:1.6;color:rgba(241,236,225,0.6);margin:0 0 16px;">{{ bn.text }}</p>
+              <div style="display:inline-flex;align-items:center;gap:8px;"><span style="font-size:13px;color:rgba(241,236,225,0.45);text-decoration:line-through;">{{ bn.from }}</span><span style="font-family:'Cormorant Garamond',serif;font-size:20px;color:#E7CB7E;font-weight:600;">{{ bn.now }}</span></div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POR QUE FAZER (comparison) ===== -->
+  <section style="background:#F2EBDC;padding:86px 0;">
+    <div style="max-width:1080px;margin:0 auto;padding:0 32px;text-align:center;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#9A7A2E;margin-bottom:14px;">Por que fazer a formação?</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,3.8vw,44px);line-height:1.08;margin:0 auto 12px;color:#141414;max-width:560px;">A demanda por terapia de relacionamento é a que mais cresce</h2>
+      <p style="font-size:16px;line-height:1.7;color:#6E665A;max-width:600px;margin:0 auto 50px;">E, por isso, a mais lucrativa. A questão é: você está preparada para atender com a segurança de estar entregando o melhor para o seu cliente?</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;text-align:left;">
+        <div style="padding:34px 32px;border-radius:18px;background:#fff;border:1px solid rgba(0,0,0,0.12);">
+          <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#9A9285;margin-bottom:22px;">Sem a formação</div>
+          <sc-for list="{{ without }}" as="w" hint-placeholder-count="5">
+            <div style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(0,0,0,0.05);"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#E6DCCB;color:#9A8458;display:flex;align-items:center;justify-content:center;font-size:12px;">✕</span><span style="font-size:14.5px;color:#6E665A;line-height:1.45;">{{ w }}</span></div>
+          </sc-for>
+        </div>
+        <div style="padding:34px 32px;border-radius:18px;background:linear-gradient(160deg,#1F1F1F,#141414);border:1px solid rgba(201,162,75,0.3);">
+          <div style="font-family:'Manrope',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#E7CB7E;margin-bottom:22px;">Com a formação</div>
+          <sc-for list="{{ withf }}" as="wf" hint-placeholder-count="5">
+            <div style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.07);"><span style="flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C9A24B;color:#0C0C0C;display:flex;align-items:center;justify-content:center;font-size:12px;">✓</span><span style="font-size:14.5px;color:rgba(241,236,225,0.85);line-height:1.45;">{{ wf }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section id="inscricao" style="background:#ECE4D2;padding:90px 0;">
+    <div style="max-width:1120px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 0.92fr;gap:48px;align-items:start;">
+      <div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,3.6vw,42px);line-height:1.1;margin:0 0 28px;color:#141414;">O que você garante ao entrar hoje na Formação Tempestade de Relacionamentos</h2>
+        <div style="display:flex;flex-direction:column;gap:13px;">
+          <sc-for list="{{ guarantees }}" as="g" hint-placeholder-count="8">
+            <div style="display:flex;align-items:flex-start;gap:12px;"><span style="flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:#C9A24B;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;">✓</span><span style="font-size:15px;color:#2A2520;line-height:1.5;">{{ g }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="padding:34px;border-radius:20px;background:#fff;border:1.5px solid #C9A24B;box-shadow:0 24px 60px rgba(0,0,0,0.14);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9A7A2E;margin-bottom:10px;">À vista ou no cartão</div>
+          <div style="display:flex;align-items:flex-end;gap:8px;margin-bottom:4px;"><span style="font-size:17px;color:#6E665A;margin-bottom:8px;">{{ installments }}x de</span><span style="font-family:'Cormorant Garamond',serif;font-size:56px;line-height:0.9;color:#141414;font-weight:600;">R$ {{ priceValue }}</span></div>
+          <div style="font-size:13px;color:#9A9285;margin-bottom:22px;">no cartão de crédito</div>
+          <a href="#" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:18px;border-radius:999px;background:linear-gradient(135deg,#C9A24B,#E7CB7E);color:#fff;font-weight:800;font-size:14px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;">Garantir minha vaga agora →</a>
+        </div>
+        <div style="padding:30px 34px;border-radius:20px;background:#fff;border:1px solid rgba(0,0,0,0.14);">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9A9285;margin-bottom:10px;">Boleto ou Pix</div>
+          <div style="display:flex;align-items:flex-end;gap:8px;margin-bottom:18px;"><span style="font-size:16px;color:#6E665A;margin-bottom:6px;">{{ installments }}x de</span><span style="font-family:'Cormorant Garamond',serif;font-size:42px;line-height:0.9;color:#141414;font-weight:600;">R$ 249,90</span></div>
+          <a href="#" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;border-radius:999px;background:#141414;color:#F2EBDC;font-weight:700;font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;">Garantir minha vaga agora →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GARANTIA ===== -->
+  <section style="background:#0C0C0C;padding:70px 0;">
+    <div style="max-width:920px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:40px;">
+      <div style="flex:0 0 auto;width:130px;height:130px;border-radius:50%;border:2px solid #C9A24B;display:flex;flex-direction:column;align-items:center;justify-content:center;animation:floaty 5s ease-in-out infinite;">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:46px;color:#E7CB7E;line-height:0.9;">{{ guaranteeDays }}</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#C9A24B;margin-top:4px;">dias</span>
+      </div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(26px,3.4vw,38px);margin:0 0 12px;color:#F6F2E9;">Garantia de satisfação total</h3>
+        <p style="font-size:16px;line-height:1.65;color:rgba(241,236,225,0.7);margin:0;max-width:540px;">Você tem {{ guaranteeDays }} dias para sentir que foi a melhor decisão. Se não for para você, devolvemos 100% do seu investimento. O risco é todo nosso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HISTÓRIAS ===== -->
+  <section style="background:#F2EBDC;padding:84px 0;">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;text-align:center;">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,48px);line-height:1.08;margin:0 auto 50px;color:#141414;">Histórias que poderiam ser a sua</h2>
+      <div style="columns:3;column-gap:20px;text-align:left;">
+        <sc-for list="{{ stories }}" as="s" hint-placeholder-count="6">
+          <div style="break-inside:avoid;margin-bottom:20px;padding:26px 26px;border-radius:16px;background:#fff;border:1px solid rgba(0,0,0,0.1);">
+            <div style="color:#C9A24B;font-size:14px;letter-spacing:.08em;margin-bottom:12px;">★★★★★</div>
+            <p style="font-size:14.5px;line-height:1.65;color:#3A352C;margin:0 0 18px;">{{ s.text }}</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="position:relative;width:38px;height:38px;border-radius:50%;overflow:hidden;"><dc-import name="SlotWarm" tone="light" label="aluna" hint-size="100%,100%" style="position:absolute;inset:0;"></dc-import></div>
+              <div><div style="font-weight:700;font-size:13.5px;color:#141414;">{{ s.name }}</div><div style="font-size:12px;color:#9A9285;">{{ s.role }}</div></div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section style="background:#0C0C0C;padding:88px 0;">
+    <div style="max-width:780px;margin:0 auto;padding:0 32px;">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,48px);text-align:center;margin:0 0 46px;color:#F6F2E9;">Perguntas frequentes</h2>
+      <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="6">
+        <div style="border-bottom:1px solid rgba(201,162,75,0.18);">
+          <button onClick="{{ item.onClick }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 4px;background:none;border:none;cursor:pointer;text-align:left;">
+            <span style="font-family:'Manrope',sans-serif;font-weight:600;font-size:16px;color:#F1ECE1;">{{ item.q }}</span>
+            <span style="flex:0 0 auto;font-size:22px;color:#C9A24B;transition:transform .25s;transform:{{ item.rot }};">+</span>
+          </button>
+          <sc-if value="{{ item.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 4px 24px;font-size:15px;line-height:1.7;color:rgba(241,236,225,0.66);">{{ item.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#070707;padding:54px 0;border-top:1px solid rgba(201,162,75,0.14);">
+    <div style="max-width:1180px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <img src="assets/logo.png" alt="Tempestade de Relacionamentos" style="height:34px;width:auto;display:block;opacity:0.92;">
+
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:rgba(241,236,225,0.4);">© 2026 Cris Schumann · Todos os direitos reservados</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;installments&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:18,&quot;min&quot;:1,&quot;max&quot;:24,&quot;tsType&quot;:&quot;number&quot;},&quot;priceValue&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;199,70&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;guaranteeDays&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:7,&quot;min&quot;:1,&quot;max&quot;:30,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  state = { open: 0 };
+
+  renderVals(){
+    const modules = [
+      {tag:'Módulo 01', title:'Bases Teóricas', img:'fundamentos / leitura'},
+      {tag:'Módulo 02', title:'Conceitos Fundamentais', img:'estudo / consultório'},
+      {tag:'Módulo 03', title:'Estilo do Terapeuta e Estrutura da Terapia de Casal', img:'casal em terapia'},
+      {tag:'Módulo 04', title:'Identificando os Problemas dos Relacionamentos', img:'escuta / diagnóstico'},
+      {tag:'Módulo 05', title:'Técnicas e Ferramentas para Cada Problema', img:'recursos lúdicos / cartas'},
+      {tag:'Módulo 06', title:'Temas Complexos do Relacionamento Contemporâneo', img:'vínculos / diversidade'},
+      {tag:'Módulo 07', title:'InTeração', img:'prática integrada'}
+    ];
+    const benefits = [
+      {icon:'◆', title:'Ênfase na prática', text:'Aulas voltadas para a aplicação real, para você atender com confiança desde o primeiro cliente.'},
+      {icon:'✦', title:'Reconhecido pelo MEC', text:'Certificação emitida por instituição reconhecida pelo Ministério da Educação.'},
+      {icon:'❖', title:'Material complementar', text:'Apostilas, roteiros e recursos para enriquecer cada sessão de atendimento.'},
+      {icon:'◈', title:'Carga de 90 horas', text:'Conteúdo completo e aprofundado para a sua formação como terapeuta.'},
+      {icon:'✚', title:'Correção de questões', text:'Atividades avaliadas para consolidar e validar o seu aprendizado.'},
+      {icon:'❍', title:'Base prática real', text:'Mais de 150 ferramentas catalogadas e prontas para usar no consultório.'},
+      {icon:'✆', title:'Suporte no WhatsApp', text:'Tire suas dúvidas diretamente com a nossa equipe pedagógica.'},
+      {icon:'∞', title:'12 meses de acesso', text:'Estude no seu ritmo, com acesso ao conteúdo por um ano completo.'}
+    ];
+    const extras = [
+      {title:'Material em PDF de estudos de caso reais', img:'apostilas em PDF'},
+      {title:'Comunidade exclusiva de alunas', img:'comunidade / grupo'},
+      {title:'Estudos de caso ao vivo na mentoria', img:'mentoria ao vivo'},
+      {title:'Acervo completo de aulas anteriores', img:'biblioteca de aulas'},
+      {title:'Encontros ao vivo mensais com a Cris', img:'live mensal'},
+      {title:'Tutora pedagógica com IA, a LIA', img:'tutora IA'}
+    ];
+    const certs = [
+      'Carga horária de 90 horas','Certificado com validade nacional','Você sai com todo o material de apoio','Instituição reconhecida pelo MEC','Profissional com diferencial no mercado'
+    ];
+    const results = ['depoimento em vídeo','depoimento em vídeo','depoimento em vídeo','depoimento em vídeo','depoimento em vídeo','depoimento em vídeo'];
+    const feats = [
+      {icon:'◆', text:'Conteúdo prático com base clínica completa para você atender.'},
+      {icon:'✦', text:'Mais de 150 ferramentas catalogadas, das quais 90 foram criadas por mim.'},
+      {icon:'❖', text:'Método estruturado para conduzir cada etapa da sessão com segurança.'},
+      {icon:'∞', text:'Estudos de caso reais para você aprender com situações de verdade.'}
+    ];
+    const programa = [
+      {n:'01', t:'Introdução à Terapia de Relacionamento'},
+      {n:'02', t:'A Terapia Cognitiva Comportamental aplicada'},
+      {n:'03', t:'O trauma e sua organização no relacionamento'},
+      {n:'04', t:'Ferramentas práticas de terapia em casal'},
+      {n:'05', t:'Reconhecendo e reparando o vínculo'},
+      {n:'06', t:'Como estruturar uma sessão que transforma'}
+    ];
+    const bonus = [
+      {title:'Imersão tudo sobre traição', text:'Um treinamento completo sobre como conduzir um dos temas mais delicados do consultório.', from:'De R$ 997', now:'Por zero', img:'imersão traição'},
+      {title:'Caixa rápida: estratégias para aumentar o faturamento', text:'Métodos práticos para você lotar a agenda e precificar com segurança.', from:'De R$ 197', now:'Por zero', img:'estratégias'},
+      {title:'LIA, a tutora pedagógica exclusiva com IA', text:'Sua tutora disponível para tirar dúvidas a qualquer hora durante a formação.', from:'De R$ 897 / ano', now:'Por zero', img:'tutora LIA'},
+      {title:'Encontros ao vivo mensais', text:'Mentorias mensais ao vivo para acompanhar a sua evolução de perto.', from:'De R$ 1.999 / ano', now:'Por zero', img:'encontros ao vivo'}
+    ];
+    const without = ['Insegurança para conduzir o atendimento','Sessões sem método e sem direção','Falta de ferramentas para cada caso','Faturamento estagnado','Medo de errar com o casal'];
+    const withf = ['Atende com segurança desde o início','Método claro e estrutura de sessão','Mais de 150 ferramentas prontas','Agenda cheia e faturamento maior','Autoridade e diferencial no mercado'];
+    const guarantees = [
+      'Acesso completo à Formação Tempestade de Relacionamentos','Certificação pela Faculdade Anhanguera','+150 ferramentas catalogadas para usar','Material complementar em PDF','Suporte pedagógico no WhatsApp','Comunidade exclusiva de alunas','Encontros ao vivo mensais com a Cris','Todos os bônus liberados ao se inscrever'
+    ];
+    const stories = [
+      {text:'Eu travava antes de cada sessão. Hoje atendo casais com método e segurança — e minha agenda finalmente está cheia.', name:'Mariana A.', role:'Terapeuta'},
+      {text:'As ferramentas mudaram completamente a forma como conduzo o consultório. Vale cada centavo.', name:'Patrícia L.', role:'Psicóloga'},
+      {text:'Saí da formação atendendo de verdade. A Cris entrega o que ninguém entrega: a prática real.', name:'Juliana M.', role:'Terapeuta de casais'},
+      {text:'O suporte e os encontros ao vivo fazem toda a diferença. Nunca me senti sozinha no processo.', name:'Renata S.', role:'Aluna'},
+      {text:'Triplicou meu faturamento em poucos meses. A confiança que ganhei não tem preço.', name:'Camila T.', role:'Terapeuta'},
+      {text:'A certificação abriu portas e me deu autoridade para cobrar o que meu trabalho vale.', name:'Fernanda R.', role:'Psicóloga'}
+    ];
+
+    const faqData = [
+      {q:'Quando começam as aulas?', a:'O acesso é liberado imediatamente após a confirmação da matrícula. Você começa a estudar no mesmo dia, no seu ritmo.'},
+      {q:'A formação é reconhecida pelo MEC?', a:'Sim. A certificação é emitida pela Faculdade Anhanguera, instituição reconhecida pelo Ministério da Educação.'},
+      {q:'Por quanto tempo tenho acesso ao conteúdo?', a:'Você tem 12 meses de acesso completo a todas as aulas, materiais e atualizações da formação.'},
+      {q:'Tenho suporte caso fique com dúvida?', a:'Sim. Você conta com suporte pedagógico no WhatsApp, a tutora LIA com IA e encontros ao vivo mensais com a Cris.'},
+      {q:'Essa formação é para quem está começando agora?', a:'Sim. O conteúdo foi pensado tanto para quem está começando quanto para quem já atende e quer mais método e ferramentas.'},
+      {q:'Se eu não gostar, como funciona a garantia?', a:'Você tem 7 dias de garantia incondicional. Se não for para você, devolvemos 100% do seu investimento.'}
+    ];
+    const open = this.state.open;
+    const faqs = faqData.map((f, i) => ({
+      q: f.q, a: f.a, open: i === open, rot: i === open ? 'rotate(45deg)' : 'rotate(0deg)',
+      onClick: () => this.setState(s => ({ open: s.open === i ? -1 : i }))
+    }));
+
+    return {
+      showMarquee: this.props.showMarquee ?? true,
+      installments: this.props.installments ?? 18,
+      priceValue: this.props.priceValue ?? '199,70',
+      guaranteeDays: this.props.guaranteeDays ?? 7,
+      modules, modulesLoop: modules.concat(modules), benefits, extras, certs, results, feats, programa, bonus, without, withf, guarantees, stories, faqs
+    };
+  }
+}
+</script>
+</body>
+</html>
